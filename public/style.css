@@ -45,7 +45,7 @@
 Global Styles
 =======================
  */
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300');
 * {
     margin: 0;
     padding: 0;
@@ -58,19 +58,19 @@ h4,
 h5,
 h6 {
     color: #464646;
-    font-family: 'montserrat_semibold';
+    font-family: 'Montserrat', sans-serif;
     margin: 0px;
 	line-height: 1.5;
 }
 p {
     color: #464646;
-    font-family: 'opensans_regular';
+    font-family: 'Open Sans Condensed', sans-serif;
     margin: 0px;
 }
 a {
     color: #464646;
     cursor: pointer;
-    font-family: 'montserrat_regular';
+    font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
 }
 input [type="submit"] {
@@ -90,7 +90,7 @@ html {
     overflow-x: hidden;
 }
 body {
-    font-family: 'opensans_regular';
+    font-family: 'Open Sans Condensed', sans-serif;
     background: #fff;
     font-size: 14px;
     overflow-x: hidden;
