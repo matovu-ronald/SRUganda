@@ -6,11 +6,12 @@ use App\Models\Member;
 use App\Notifications\MemberFeedback;
 use App\Notifications\MembershipNotification;
 use App\User;
+use Config;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Prologue\Alerts\Facades\Alert;
 use jeremykenedy\LaravelRoles\Models\Permission;
 use jeremykenedy\LaravelRoles\Models\Role;
-use Config;
 class MembershipController extends Controller
 {
     /**
@@ -88,12 +89,13 @@ class MembershipController extends Controller
         $member->confirmed = false;
 
         $member->save();
+        Alert::info('This is a blue bubble.');
 
         \Notification::route('mail', Config::get('settings.email_one'))->notify(new MembershipNotification());
         \Notification::route('mail', $inputs['email'])->notify(new MemberFeedback());
 
 
-        return back();
+        return back()->with('success', "Thanks for registering, we are going to verify your membership");
     }
 
     /**

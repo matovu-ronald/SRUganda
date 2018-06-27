@@ -58,6 +58,12 @@
         </div>
         <!--- Banner Section End-->
     @endif
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>{{ session('success') }}</strong>
+        </div>
+    @endif
     @yield('content')
 
 

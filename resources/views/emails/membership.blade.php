@@ -1,10 +1,10 @@
 @component('mail::message')
 # Introduction
 
-The body of your message.
+You have a membership appllication.
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => config('app.url').'/admin'])
+Check it
 @endcomponent
 
 Thanks,<br>
