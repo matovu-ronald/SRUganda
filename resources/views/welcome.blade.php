@@ -13,7 +13,6 @@
                     <div class="heading-col">
                         <h2>Society of Radiography Uganda</h2>
                         <div class="border"></div>
-                        <p class="down">Slogan goes here</p>
 
                     </div>
                 </div>
