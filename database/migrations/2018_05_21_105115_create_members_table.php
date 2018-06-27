@@ -15,7 +15,8 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
             $table->string('profession', 100)->nullable();
             $table->string('pic', 100)->nullable();
             $table->string('phone', 14)->nullable();
@@ -27,7 +28,6 @@ class CreateMembersTable extends Migration
             $table->boolean('confirmed')->nullable()->default(false);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

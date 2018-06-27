@@ -41,7 +41,7 @@
 	            		        <h3>Membership Registration Form</h3>
 	            		        <p>Please fill in the fields below to apply for membership:</p>
 	            		        <div id="message-contact"></div>
-	            		        <form action="{{ route('register') }}" enctype="multipart/form-data" method="post">
+	            		        <form action="{{ url('members') }}" enctype="multipart/form-data" method="post">
 	            		        	@csrf
 	            		        	<div class="row">
 	            		        		<div class="col-md-6">
@@ -87,28 +87,7 @@
             		        				@endif
 	            		        		</div>
 	            		        	</div>
-	            		        	<div class="row">
-	            		        		<div class="col-md-6">
-	            		        			<div class="form-group">
-	            		        			    <input type="password" class="form-control" placeholder="Password" required="required" id="pass" name="password">
-	            		        			</div>
-	            		        			@if ($errors->has('password'))
-	            		        			    <span class="invalid-feedback">
-	            		        			        <strong>{{ $errors->first('password') }}</strong>
-	            		        			    </span>
-	            		        			@endif
-	            		        		</div>
-	            		        		<div class="col-md-6">
-            		        				<div class="form-group">
-            		        				    <input type="password" class="form-control" placeholder="Confirm password" required="required" id="visitor_email" name="password_confirmation">
-            		        				</div>
-            		        				@if ($errors->has('password'))
-            		        				    <span class="invalid-feedback">
-            		        				        <strong>{{ $errors->first('password') }}</strong>
-            		        				    </span>
-            		        				@endif
-	            		        		</div>
-	            		        	</div>
+	            		        	
 
 	            		        	<div class="row">
 	            		        		<div class="col-md-4">

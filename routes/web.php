@@ -32,7 +32,7 @@ Route::get('team/{slug}', 'PageController@singleTeam')->name('team.show');
 Route::post('send', 'ContactController@send');
 
 //membership posting
-Route::post('member', 'MembershipController@store');
+Route::post('members', 'MembershipController@store');
 
 //download
 Route::get('download/{id}', 'PageController@download');

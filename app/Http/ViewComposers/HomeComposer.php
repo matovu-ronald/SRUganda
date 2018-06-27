@@ -16,7 +16,7 @@ class HomeComposer
 	{
 		$this->slides = Slide::latest()->limit(3)->get();
 		$this->partners = Partner::all()->count();
-		$this->members = Member::all()->count();
+		$this->members = Member::whereConfirmed(1)->count();
 	}
 
 	public function compose(View $view)

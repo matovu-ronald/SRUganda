@@ -46,6 +46,7 @@ Global Styles
 =======================
  */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
 * {
     margin: 0;
     padding: 0;
@@ -64,13 +65,13 @@ h6 {
 }
 p {
     color: #464646;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Arimo', sans-serif;
     margin: 0px;
 }
 a {
     color: #464646;
     cursor: pointer;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 input [type="submit"] {
@@ -90,7 +91,7 @@ html {
     overflow-x: hidden;
 }
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Arimo', sans-serif;
     background: #fff;
     font-size: 14px;
     overflow-x: hidden;
