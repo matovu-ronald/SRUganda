@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="item">
-						<h2>Why become a member</h2>
+						<h2>SRU Registration Procedures</h2>
 						{!! $page->content ? $page->content : '<p>
 							Lorem ipsum dolor sit amet, mea nominavi instructior ex, has cu exerci temporibus. Mei no vero sensibus. Vix at dico expetendis vituperata, te senserit suavitate ius. Ut quo utamur feugiat labores, offendit intellegat vituperata nec ut, sed minimum insolens persequeris ad. Vel facilisi qualisque at.
 						</p>
