@@ -30,9 +30,9 @@ class MembershipController extends Controller
      */
     public function check(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|exits:members',
-        // ]);
+        $request->validate([
+            'id' => 'required|exits:members',
+        ]);
         $id = $request->get('id');
         $member = Member::find($id);
         if (!$member) {
