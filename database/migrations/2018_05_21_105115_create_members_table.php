@@ -26,6 +26,7 @@ class CreateMembersTable extends Migration
             $table->text('files')->nullable();
             $table->text('about')->nullable();
             $table->boolean('confirmed')->nullable()->default(false);
+            $table->date('expiry_date')->nullable();
             $table->timestamps();
 
         });

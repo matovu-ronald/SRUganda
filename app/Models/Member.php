@@ -25,6 +25,7 @@ class Member extends Model
     protected $casts = [
         'files' => 'array',
         'confirmed' => 'boolean',
+        'expiry_date' => 'date',
     ];
 
     /*

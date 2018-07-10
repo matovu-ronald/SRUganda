@@ -6,6 +6,7 @@ use App\Models\Member;
 use App\Notifications\MemberFeedback;
 use App\Notifications\MembershipNotification;
 use App\User;
+use Carbon\Carbon;
 use Config;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -94,6 +95,7 @@ class MembershipController extends Controller
         $member->about = $inputs['about'];
         $member->profession = $inputs['profession'];
         $member->confirmed = false;
+        $member->expiry_date = date('Y-m-d', strtotime(Carbon::now()->addDays(365)));
 
         $member->save();
         Alert::info('This is a blue bubble.');
