@@ -24,7 +24,7 @@
 					<div class="item">
 						<img src="{{ $page->withFakes()->pic ? asset($page->withFakes()->pic) : asset('img/blog1.jpg') }}" alt="about image">
 					</div>
-					<a href="{{ url('registration-check') }}" class="btn btn-primary mt-5">Check Membership</a>
+					<a href="{{ url('registration-check') }}" class="btn btn-primary mt-5" style="margin-top: 20px;">Check Membership</a>
 				</div>
 			</div>
 			
