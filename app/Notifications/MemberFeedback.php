@@ -16,9 +16,10 @@ class MemberFeedback extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public $id;
+    public function __construct($id)
     {
-        //
+        $this->id = $id;
     }
 
     /**
@@ -40,7 +41,7 @@ class MemberFeedback extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->markdown('emails.member-feedback');
+        return (new MailMessage)->markdown('emails.member-feedback', ['id' => $this->id]);
     }
 
     /**

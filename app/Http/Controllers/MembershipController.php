@@ -10,8 +10,7 @@ use Config;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Prologue\Alerts\Facades\Alert;
-use jeremykenedy\LaravelRoles\Models\Permission;
-use jeremykenedy\LaravelRoles\Models\Role;
+
 class MembershipController extends Controller
 {
     /**
@@ -29,9 +28,25 @@ class MembershipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function check(Request $request)
     {
-        //
+        // $request->validate([
+        //     'name' => 'required|exits:members',
+        // ]);
+        $id = $request->get('id');
+        $member = Member::find($id);
+        if (!$member) {
+            return back()->withDanger('Your not a member');
+        }
+        if ($member->confirmed == 0) {
+            $status = 'Not verified yet';
+        }
+        else
+        {
+            $status = 'Verified';
+        }
+        return back()->withSuccess('Your a registered member. Your registration status is: '.$status);
+
     }
 
     /**
@@ -48,7 +63,7 @@ class MembershipController extends Controller
             'name' => 'required',
             'email' => 'required|unique:members',
             'institute' => 'required',
-            'district' => 'required',
+            'workstation' => 'required',
             'phone' => 'required',
             'gender' => 'required',
             'profession' => 'required',
@@ -56,15 +71,7 @@ class MembershipController extends Controller
             'files' => 'required',
         ]);
 
-        // $user = User::create([
-        //     'name' => $inputs['name'],
-        //     'email' => $inputs['email'],
-        //     'password' => Hash::make($inputs['password']),
-        // ]);
-
-        // $role = Role::where('name', '=', 'User')->first();
-
-        // $user->attachRole($role);
+       
         if ($request->hasFile('pic')) {
             $file = $request->file('pic');
             $path = $file->store('members', 'public');
@@ -81,7 +88,7 @@ class MembershipController extends Controller
         $member->name = $inputs['name'];
         $member->email = $inputs['email'];
         $member->phone = $inputs['phone'];
-        $member->district = $inputs['district'];
+        $member->workstation = $inputs['workstation'];
         $member->gender = $inputs['gender'];
         $member->institute = $inputs['institute'];
         $member->about = $inputs['about'];
@@ -92,7 +99,7 @@ class MembershipController extends Controller
         Alert::info('This is a blue bubble.');
 
         \Notification::route('mail', Config::get('settings.email_one'))->notify(new MembershipNotification());
-        \Notification::route('mail', $inputs['email'])->notify(new MemberFeedback());
+        \Notification::route('mail', $inputs['email'])->notify(new MemberFeedback($member->id));
 
 
         return back()->with('success', "Thanks for registering, we are going to verify your membership");

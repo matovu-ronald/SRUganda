@@ -20,7 +20,7 @@ class CreateMembersTable extends Migration
             $table->string('profession', 100)->nullable();
             $table->string('pic', 100)->nullable();
             $table->string('phone', 14)->nullable();
-            $table->string('district')->nullable();
+            $table->string('workstation')->nullable();
             $table->string('institute')->nullable();
             $table->string('gender', 100)->nullable();
             $table->text('files')->nullable();

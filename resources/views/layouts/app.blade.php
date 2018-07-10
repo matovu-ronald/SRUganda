@@ -59,11 +59,31 @@
         <!--- Banner Section End-->
     @endif
     @if (Session::has('success'))
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong>{{ session('success') }}</strong>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>{{ session('success') }}</strong>
+                    </div>
+                </div>
+            </div>
         </div>
     @endif
+
+    @if (Session::has('danger'))
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>{{ session('danger') }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
     @yield('content')
 
 

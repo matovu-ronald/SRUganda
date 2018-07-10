@@ -112,4 +112,9 @@ trait PageTemplates
         $this->main();
     }
 
+    private function check()
+    {
+        $this->main();
+    }
+
 }

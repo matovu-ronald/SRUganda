@@ -18,7 +18,7 @@
 						<p>
 							Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit.
 						</p>	' !!}
-						<a href="#register" class="btn btn-primary">Register</a>
+						<a href="{{ url('registration-check') }}" class="btn btn-primary">Check Membership</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6">
@@ -78,11 +78,11 @@
 	            		        		</div>
 	            		        		<div class="col-md-6">
             		        				<div class="form-group">
-            		        				    <input type="text" class="form-control" placeholder="District of operation" required="required" id="visitor_email" name="district">
+            		        				    <input type="text" class="form-control" placeholder="Work Station" required="required" id="visitor_email" name="workstation">
             		        				</div>
-            		        				@if ($errors->has('district'))
+            		        				@if ($errors->has('workstation'))
             		        				    <span class="invalid-feedback">
-            		        				        <strong>{{ $errors->first('district') }}</strong>
+            		        				        <strong>{{ $errors->first('workstation') }}</strong>
             		        				    </span>
             		        				@endif
 	            		        		</div>
@@ -164,5 +164,5 @@
 	            		</div>
 	            	</div>
 	            </div>
-	        </div>
+	</div>
 @endsection

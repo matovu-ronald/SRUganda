@@ -34,6 +34,9 @@ Route::post('send', 'ContactController@send');
 //membership posting
 Route::post('members', 'MembershipController@store');
 
+//membership check 
+Route::post('check', 'MembershipController@check')->name('check');
+
 //download
 Route::get('download/{id}', 'PageController@download');
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])

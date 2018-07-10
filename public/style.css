@@ -2663,6 +2663,16 @@ Footer Bottom Section
     color: #555;
 }
 
+.contact input[type="number"] {
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #d8d8d8;
+    color: #555;
+}
+
 .contact input[type="password"] {
     background: #fff;
     border-radius: 0;
