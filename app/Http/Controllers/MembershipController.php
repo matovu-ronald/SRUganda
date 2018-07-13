@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Config;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Validator;
 use Prologue\Alerts\Facades\Alert;
 
 class MembershipController extends Controller
@@ -31,9 +32,9 @@ class MembershipController extends Controller
      */
     public function check(Request $request)
     {
-        $request->validate([
+        /*$request->validate([
             'id' => 'required|exits:members',
-        ]);
+        ]);*/
         $id = $request->get('id');
         $member = Member::find($id);
         if (!$member) {
