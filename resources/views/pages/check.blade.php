@@ -14,16 +14,6 @@
         		        	@csrf
         		        	<div class="row">
         		        		<div class="col-md-6">
-        		        			<div class="form-group">
-        		        			    <input type="text" class="form-control" placeholder="Enter Full Name" id="visitor_name" name="name">
-        		        			</div>
-        		        			@if ($errors->has('name'))
-        		        			    <span class="invalid-feedback">
-        		        			        <strong>{{ $errors->first('name') }}</strong>
-        		        			    </span>
-        		        			@endif
-        		        		</div>
-        		        		<div class="col-md-6">
     		        				<div class="form-group">
     		        				    <input type="number" class="form-control" placeholder="Registration ID" required="required" id="visitor_email" name="id">
     		        				</div>
