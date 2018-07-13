@@ -16,7 +16,7 @@
                                 <li><a href="{{ url('team') }}">Our team</a></li>
                             </ul>
                         </li>
-                        <li class="{{ Request::path() == 'membership' ? 'current-menu-item' : '' }}"><a href="{{ url('membership') }}">Membership</a>
+                        <li class="{{ Request::path() == 'membership' ? 'current-menu-item' : '' }}"><a href="{{ url('membership') }}">Registration</a>
                         </li>
                         <li class="{{ Request::path() == 'gallery' ? 'current-menu-item' : '' }}"><a href="{{ url('gallery') }}">Gallery</a></li>
                         <li class="{{ Request::path() == 'news' ? 'current-menu-item' : '' }}"><a href="{{ url('news') }}">News</a></li>
