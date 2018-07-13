@@ -47,7 +47,7 @@ class MembershipController extends Controller
         {
             $status = 'Verified';
         }
-        return back()->withSuccess('Your a registered member. Your registration status is: '.$status);
+        return back()->withSuccess( $member->name .', you a registered member. Your registration status is: '.$status);
 
     }
 
