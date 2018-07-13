@@ -157,7 +157,7 @@
                             </div>
                             <div class="text">
                                 <h2>Completed a Radiography course?</h2>
-                                <p>Have completed a Radiography course at an accredited and recognized college internationally.</p>
+                                <p>Have you completed a Radiography course at an accredited and recognized college internationally.</p>
                             </div>
                         </div>
                         <div class="part">                          
@@ -165,8 +165,8 @@
                                 <p><i class="fa fa-wheelchair"></i></p>
                             </div>
                             <div class="text">
-                                <h2>Studying Radiography?</h2>
-                                <p>Be a continuing student, studying Radiography.</p>
+                                <h2>Practicing Radiography?</h2>
+                                <p>Are you in the field already?</p>
                             </div>
                         </div>
                         <div class="part">
@@ -192,8 +192,8 @@
                                 <p><i class="fa fa-pencil"></i></p>
                             </div>
                             <div class="text">
-                                <h2>Register with Documents</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur a elit, sed do eiu tempor incididunt ute labore etrt dolore.</p>
+                                <h2>Registration</h2>
+                                <p>Pay UGX120,000 to the SRU bank account (this includes UGX100,000 registration application fee plus UGX20,000 membership)</p>
                             </div>                          
                         </div>
                         <div class="part">  
@@ -202,7 +202,7 @@
                             </div>                          
                             <div class="text">
                                 <h2>You can also apply online</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur a elit, sed do eiu tempor incididunt ute labore etrt dolore.</p>
+                                <p>Submit your documents and bankslips or payment evidence online for verification.</p>
                             </div>                          
                         </div>
                         <div class="part">                              
@@ -211,7 +211,7 @@
                             </div>
                             <div class="text">
                                 <h2>Verified and Become a member</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur a elit, sed do eiu tempor incididunt ute labore etrt dolore.</p>
+                                <p>Your documents will be verified, you can also check your membership status online. Whether pending or successful.</p>
                             </div>
                         </div>
                     </div>
