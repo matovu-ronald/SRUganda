@@ -32,22 +32,32 @@ class MembershipController extends Controller
      */
     public function check(Request $request)
     {
+
+        $searchName = request('name');
+
+        if($searchName) {
+            $results = Member::where('name', 'LIKE', '%'. $searchName . '%')->paginate(10);
+        } else {
+            $results = Member::paginate(10);
+        }
+
+        return back()->with('results', $results);
         /*$request->validate([
             'id' => 'required|exits:members',
         ]);*/
-        $id = $request->get('id');
-        $member = Member::find($id);
-        if (!$member) {
-            return back()->withDanger('Your not a member');
-        }
-        if ($member->confirmed == 0) {
-            $status = 'Not verified yet';
-        }
-        else
-        {
-            $status = 'Verified';
-        }
-        return back()->withSuccess( $member->name .', you a registered member. Your registration status is: '.$status);
+        // $id = $request->get('id');
+        // $member = Member::find($id);
+        // if (!$member) {
+        //     return back()->withDanger('Your not a member');
+        // }
+        // if ($member->confirmed == 0) {
+        //     $status = 'Not verified yet';
+        // }
+        // else
+        // {
+        //     $status = 'Verified';
+        // }
+        // return back()->withSuccess( $member->name .', you a registered member. Your registration status is: '.$status);
 
     }
 
