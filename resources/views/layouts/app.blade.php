@@ -102,6 +102,8 @@
     <script src="{{ asset('js/jquery.counterup.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+
+    @yield('js')
 </body>
 
 </html>
